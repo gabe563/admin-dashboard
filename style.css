@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary-color: #2563eb;
+    --secondary-color: #0ea5e9;
+    --background-color: #e0f2fe;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+img[src^='assets']{
+    filter: invert();
+}
+
+img[src*='magnify'], img[src*='notification'], img[src*='profile-pic'], img[src*='icon'], .article-opt > img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    filter: none;
+    cursor: pointer;
+    width: 30px;
+}
+
+img[src*='profile-pic']{
+    border-radius: 50%;
+    width: 55px;
+}
+
+.welcome > img{
+    width: 75px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    height: 100vh;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    row-gap: 24px;
+    padding: 24px 44px;
+    box-shadow: rgb(0 0 0 / 40%) 1px 3px 8px;
+    background-color: white;
+}
+
+.search{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 16px;
+}
+
+.profile-notif{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    align-items: center;
+    gap: 32px;
+}
+
+input[type='search']{
+    width: 150%;
+    background-color: var(--background-color);
+    border: none;
+    padding: 8px;
+    border-radius: 18px;
+}
+
+.welcome{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 18px;
+    align-items: center;
+    justify-content: start;
+}
+
+.welcome img{
+    cursor: auto;
+}
+
+.welcome-txt p:first-child{
+    margin-bottom: 4px;
+    font-size: 0.8rem;
+}
+
+.welcome-txt p:last-child{
+    font-size: 1.2rem;
+}
+
+.primary-btns{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 18px;
+}
+
+.primary-btns button{
+    cursor: pointer;
+    width: 100px;
+    border-radius: 22px;
+    border: none;
+    padding: 12px;
+    color: white;
+    background-color: var(--primary-color);
+    transition: all 0.2s ease;
+}
+
+.sidebar{
+    display: grid;
+    grid-row: span 2;
+    row-gap: 30px;
+    align-content: flex-start;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 16px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 12px;
+}
+
+.logo img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    width: 54px;
+}
+
+li img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    width: 25px;
+    cursor: pointer;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    gap: 16px;
+    margin: 18px;
+    margin-bottom: 28px;
+    cursor: pointer;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.articles{
+    margin-top: 40px;
+    margin: 24px;
+}
+
+.projects > h1, .announcements > h1, .trending > h1{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.art-cont{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 24px;
+}
+
+.box-projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project:nth-child(2){
+    gap: 0;
+}
+
+.project:nth-last-child(1){
+    gap: 10%;
+}
+
+.project{
+    position: relative;
+    display: flex;
+    gap: 16%;
+    height: 150px;
+    border-radius: 8px;
+    font-size: 0.6rem;
+    padding: 27px 20px;
+    box-shadow: rgb(0 0 0 / 40%) 1px 3px 8px;
+    background-color: white;
+}
+
+.line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 4px solid var(--secondary-color);
+    height: 196px;
+    border-radius: 8px 0 0 8px;
+}
+
+.project h1{
+    font-size: 0.8rem;
+}
+
+.project img[src*='icon']{
+    width: 88px;
+    margin-bottom: 10px;
+}
+
+.project img[src*='rock']{
+    width: 70px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.soon{
+    display: flex;
+    align-items: center;
+}
+
+.article-opt{
+    display: flex;
+    margin-left: 62px;
+    gap: 18px;
+}
+
+.project img{
+    width: 22px;
+    gap: 10px;
+}
+
+img[src*='soon']{
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    filter: none;
+    width: 54px;
+}
+
+.box-announcement{
+    border-radius: 8px;
+    margin-bottom: 32px;
+    padding: 10px 44px 12px;
+    box-shadow: rgb(0 0 0 / 40%) 1px 3px 8px;
+    background-color: white;
+}
+
+h4{
+    margin-top: 10px;
+}
+
+.box-announcement p{
+    margin-top: 2px;
+    margin-bottom: 8px;
+    max-width: 200px;
+    font-size: 0.6rem;
+    color: gray;
+}
+
+.box-trending{
+    border-radius: 8px;
+    padding: 28px 30px 13px;
+    box-shadow: rgb(0 0 0 / 40%) 1px 3px 8px;
+    background-color: white;
+}
+
+img[alt*='-profile']{
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    width: 54px;
+    border-radius: 50%;
+    filter: none;
+}
+
+.profile-pic{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.profile-pic h4{
+    margin: 0;
+}
+
+.profile-pic p{
+    font-size: 0.8rem;
+    color: gray;
+}
+
+img[alt*='-profile'], .project img:not(img[src*='soon']), .profile-notif img, .options img, li{
+    transition: all 0.3s ease;
+}
+
+
+.primary-btns button:hover, img[alt*='-profile']:hover, .project img:hover:not(img[src*='soon']), .profile-notif img:hover, .options img:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.primary-btns button:active, img[alt*='-profile']:active, .project img:active:not(img[src*='soon']), .profile-notif img:active, .options img:active, li:active{
+    transform: scale(1 , 1);
+}
