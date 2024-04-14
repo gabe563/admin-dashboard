@@ -1,3 +1,3 @@
 # Admin Dashboard
 
-Live Preview [here](https://foxysamu.github.io/admin-dashboard/)
+Live Preview [here](https://gabe563.github.io/admin-dashboard/)
